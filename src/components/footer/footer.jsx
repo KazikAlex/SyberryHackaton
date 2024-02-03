@@ -14,7 +14,7 @@ export default function Footer() {
                     <li><a href="#" className="footer-internal-links__link">About</a></li>
                     <li><a href="#" className="footer-internal-links__link">Testimonials</a></li>
                     <li><a href="#" className="footer-internal-links__link">Contact</a></li>
-                    <li><a href="#" className="footer-internal-links__link">Download</a></li>
+                    <li><a href="#" className="footer-internal-links__link last-internal-link">Download</a></li>
                 </ul>
             </nav>
             <div className="footer-external-links">

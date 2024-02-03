@@ -19,12 +19,17 @@ a {
         flex-wrap: wrap;
         padding-bottom: 6px;
         letter-spacing: 2px;
-        height: 6vh;
+        height: 7vh;
 
         .footer-internal-links__link {
             padding: 4px 20px;
             font-size: 1.1rem;  
             display: inline-block;
+            border-right: 1px solid #5f575777;
+        }
+
+        .last-internal-link {
+            border-right: none;
         }
     }
 
