@@ -4,6 +4,9 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import styles from "./slider.scss";
 import {Swiper,SwiperSlide} from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function Slider({data}) {
   return (
