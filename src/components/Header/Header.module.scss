@@ -32,9 +32,9 @@
 .input {
   @include fields;
   cursor: text;
-  color: $color-grey;
+  color:  #5f575777;
   &::placeholder {
-    color: $color-lGrey;
+    color:  #5f575777;
     @include text("2");
   }
 

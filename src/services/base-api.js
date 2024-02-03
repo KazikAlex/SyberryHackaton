@@ -14,8 +14,13 @@ export const baseApi = createApi({
             getFilms: builder.query({
                 query: (id) => `/api/v2.2/films/${id}`,
             }),
+            getSearchByKeywordFilms: builder.query({   
+                query: () => `/api/v2.1/films/search-by-keyword`,})
         }
     },
+    
 })
 
-export const { useGetFilmsQuery } = baseApi
+export const { useGetFilmsQuery, useGetSearchByKeywordFilmsQuery } = baseApi
+
+
