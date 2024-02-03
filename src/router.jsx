@@ -10,7 +10,7 @@ import { LoginPage } from "./pages/loginPage/LoginPage";
 import FilmPage from "./pages/filmPage/filmPage";
 
 import UserPage from "./pages/UserPage/UserPage";
-import Main from "./pages/Main/main";
+import {Home} from './pages/home/home'
 
 const publicRoutes = [
   {
@@ -25,7 +25,7 @@ const publicRoutes = [
 
 const privateRoutes = [
   {
-    element: <Main />,
+    element: <Home />,
     path: "/",
   },
   {

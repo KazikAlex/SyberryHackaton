@@ -5,21 +5,9 @@ import Button from "../Button/Button";
 import { useState } from "react";
 import LoginForm from "../LoginForm/LoginForm";
 
-import {useGetSearchByKeywordFilmsQuery} from '../../services/base-api.js'
-
 export default function Header() {
-  const [filmsData, setFilmData] =useState([])
-  const {data} = useGetSearchByKeywordFilmsQuery()
-  const [value, setValue] = useState("")
-  const handlerSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    setValue(form.search.value)
-  }
-
   const [isUserLog, setUserLog] = useState(true);
   const [activeForm, setActiveForm] = useState(false);
-
 
   const activeFormHandler = () => {
     setActiveForm(!activeForm);
@@ -43,9 +31,9 @@ export default function Header() {
           </div>
         )}
 
-        <form className={styles.form} onSubmit={(e) => handlerSubmit(e)}>
-          <input className={styles.input} type="text" name="search" placeholder="Поиск" />
-          <Button context={"Поиск"} className={styles.header_btn} type="submit"></Button>
+        <form className={styles.form}>
+          <input className={styles.input} type="text" name="" id="" />
+          <Button context={"Поиск"} className={styles.header_btn}></Button>
         </form>
         <Button context={"Войти"} className={styles.header_btn}  click={activeFormHandler}></Button>
         {
