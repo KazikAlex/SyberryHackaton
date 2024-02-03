@@ -4,7 +4,7 @@ export const baseApi = createApi({
     reducerPath: 'baseApi',
     baseQuery: fetchBaseQuery({
         baseUrl: 'https://kinopoiskapiunofficial.tech',
-        credentials: 'include',
+        // credentials: 'include',
         prepareHeaders: headers => {
             headers.append('X-API-KEY', '311f6ed2-2da0-4a4e-bda9-3c31df66674a');
         },
@@ -12,7 +12,7 @@ export const baseApi = createApi({
     endpoints: builder => {
         return {
             getFilms: builder.query({
-                query: () => `/api/v2.2/films/{id}`,
+                query: (id) => `/api/v2.2/films/${id}`,
             }),
         }
     },
