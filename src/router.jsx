@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom'
 import {Home} from './pages/home/home'
 import {LoginPage} from './pages/loginPage/LoginPage'
+import FilmPage from './pages/filmPage/filmPage'
 
 
 
@@ -22,7 +23,12 @@ const privateRoutes = [
         element: <Home />,
         path: '/',
     },
+    {
+        element: <FilmPage />,
+        path: `/film/:id`,
+    },
 ]
+
 
 const router = createBrowserRouter([
     {
