@@ -1,13 +1,13 @@
 import React from 'react';
-import {useGetFilmsQuery} from "../../services/base-api";
+import {useGetCollectionsFilmsQuery} from "../../services/base-api";
+import Main from '../Main/main'
 
 export const Home = () => {
-    const {data} = useGetFilmsQuery(5047468)
-    console.log(data)
+    const {data} = useGetCollectionsFilmsQuery()
+    console.log(data?.items)
      return (
         <div>
-
-            {JSON.stringify(data)}
+            {data?.items.map((item) => <Main data={item}></Main>)}
         </div>
     );
 };

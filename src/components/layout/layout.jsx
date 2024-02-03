@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
-import Header from '../Header/Header'
+import Header from '../Header/Header';
 import Footer from '../footer/footer';
-
 
 
 

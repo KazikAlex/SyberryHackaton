@@ -3,10 +3,11 @@ import styles from "./Header.module.scss";
 import Container from "../Container/Container";
 import Button from "../Button/Button";
 import { useState } from "react";
+import LoginForm from "../LoginForm/LoginForm";
+
 import {useGetSearchByKeywordFilmsQuery} from '../../services/base-api.js'
 
 export default function Header() {
-  const [isUserLog, setUserLog] = useState(true);
   const [filmsData, setFilmData] =useState([])
   const {data} = useGetSearchByKeywordFilmsQuery()
   const [value, setValue] = useState("")
@@ -15,8 +16,14 @@ export default function Header() {
     const form = e.target
     setValue(form.search.value)
   }
- 
 
+  const [isUserLog, setUserLog] = useState(true);
+  const [activeForm, setActiveForm] = useState(false);
+
+
+  const activeFormHandler = () => {
+    setActiveForm(!activeForm);
+  }
 
   return (
     <Container className={styles.header}>
@@ -40,7 +47,10 @@ export default function Header() {
           <input className={styles.input} type="text" name="search" placeholder="Поиск" />
           <Button context={"Поиск"} className={styles.header_btn} type="submit"></Button>
         </form>
-        <Button context={"Войти"} className={styles.header_btn}></Button>
+        <Button context={"Войти"} className={styles.header_btn}  click={activeFormHandler}></Button>
+        {
+          activeForm ? <LoginForm /> : null
+        }
       </header>
     </Container>
   );
