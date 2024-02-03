@@ -7,7 +7,16 @@ export const LoginForm = () => {
 
   return (
     <div className={styles.loginForm}>
-      <form>
+      <form onSubmit={()=> {
+        const data = {
+          login: '',
+          password: ''
+        }
+        data.login = loginRef.value;
+        data.password = passwordRef.value;
+        console.log(data);
+        localStorage.setItem('userData', JSON.stringify(data));
+      }}>
         <label className={styles.label} htmlFor="UserName">
           User Name
           <input className={styles.input} type="login" ref={loginRef} />

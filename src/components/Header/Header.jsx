@@ -4,41 +4,65 @@ import Container from "../Container/Container";
 import Button from "../Button/Button";
 import { useState } from "react";
 import LoginForm from "../LoginForm/LoginForm";
+import { useGetSearchByKeywordFilmsQuery } from '../../services/base-api';
 
 export default function Header() {
   const [isUserLog, setUserLog] = useState(true);
   const [activeForm, setActiveForm] = useState(false);
 
+  const [search, setSearch] = useState("");
+  const { data: dataSearch } = useGetSearchByKeywordFilmsQuery({
+    keyword: search,
+  });
+  const onChangeHandler = (e) => {
+    setSearch(e.currentTarget.value);
+  };
+
   const activeFormHandler = () => {
     setActiveForm(!activeForm);
-  }
+  };
 
   return (
     <Container className={styles.header}>
       <header className={styles.header__container}>
-        <div className={styles.logo} id="/">
+        <a href="/" className={styles.logo} id="/">
           <img src="icons/logo.svg" alt="logo"></img>
           <p className={styles.logo_p}>HackaFilm</p>
-        </div>
+        </a>
         {isUserLog && (
-          <div className={styles.favorite}>
+          <a href="/user-page" className={styles.favorite}>
             <img
               className={styles.favorite_img}
               src="icons/star-svgrepo-com.svg"
               alt="star"
             ></img>
             <p className={styles.favorite_p}>Favorites film</p>
-          </div>
+          </a>
         )}
 
         <form className={styles.form}>
-          <input className={styles.input} type="text" name="" id="" />
-          <Button context={"Поиск"} className={styles.header_btn}></Button>
+          {" "}
+          <input
+            className={styles.input}
+            type="text"
+            value={search}
+            onChange={onChangeHandler}
+          />
+          {/* {JSON.stringify(dataSearch)}
+          <div>
+            <ul>
+            {dataSearch?.items.map(item => (
+              <li>{item.keyword}</li>
+            ))}
+            </ul>
+            </div> */}
         </form>
-        <Button context={"Войти"} className={styles.header_btn}  click={activeFormHandler}></Button>
-        {
-          activeForm ? <LoginForm /> : null
-        }
+        <Button
+          context={"Войти"}
+          className={styles.header_btn}
+          click={activeFormHandler}
+        ></Button>
+        {activeForm ? <LoginForm /> : null}
       </header>
     </Container>
   );
