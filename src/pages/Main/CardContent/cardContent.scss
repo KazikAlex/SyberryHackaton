@@ -1,0 +1,17 @@
+.filmDescription {
+  display: flex;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.common {
+  display: flex;
+}
