@@ -13,13 +13,13 @@ export default function Header (){
           <p className={styles.logo_p}>HackaFilm</p>
         </div> 
         <div className={styles.favorite}>
-          <img className={styles.favorite_img} src='icons/star-svgrepo-com.svg' alt="star"></img>
-          <p className={styles.favorite_p}>Favorites film</p>
+            <img className={styles.favorite_img} src='icons/star-svgrepo-com.svg' alt="star"></img>
+            <p className={styles.favorite_p}>Favorites film</p>
         </div> 
-        <form className={styles.form}>
-          <input className={styles.input} type="text" name="" id=""/> 
-          <Button context={"Поиск"} className={styles.header_btn}></Button> 
-        </form>
+          <form className={styles.form}>
+            <input className={styles.input} type="text" name="" id=""/> 
+            <Button context={"Поиск"} className={styles.header_btn}></Button> 
+          </form>
         <Button context={"Войти"} className={styles.header_btn}></Button> 
       </header> 
     </Container>
