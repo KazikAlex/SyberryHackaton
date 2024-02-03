@@ -1,5 +1,6 @@
 import React from "react";
-import "./cardContent.scss";
+import styles from  "./cardContent.scss";
+import Button from '../../../components/Button/Button'
 
 export default function CardContent({data}) {
  
@@ -8,7 +9,7 @@ export default function CardContent({data}) {
       <div className="common">
         <span>{data?.nameRu}</span>
         <span>{data?.nameEn}</span>
-        <button>Смотреть</button>
+        <Button context={"Cмотреть онлайн"} className={styles.btn}></Button>
       </div>
       <div className="filmDescription">
         <div className="left">
