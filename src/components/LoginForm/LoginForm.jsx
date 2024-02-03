@@ -13,6 +13,7 @@ export const LoginForm = () => {
           Login
           <input className={styles.input} type="password" />
         </label>
+        <button className={styles.button} >Войти</button>
       </form>
     </div>
   )

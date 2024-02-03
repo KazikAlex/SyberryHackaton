@@ -1,14 +1,19 @@
 import React from 'react';
-import {useGetCollectionsFilmsQuery} from "../../services/base-api";
 import Main from '../Main/main'
+import {useGetCollectionsFilmsQuery, useGetFilmsQuery} from "../../services/base-api";
+import Container from '../../components/Container/Container';
+
 
 export const Home = () => {
-    const {data} = useGetCollectionsFilmsQuery()
-    console.log(data?.items)
+    const {data: filmData} = useGetFilmsQuery(Math.floor(Math.random() * 700))
+    const {data: dataAllFilms} = useGetCollectionsFilmsQuery()
+    console.log(dataAllFilms?.items);
      return (
-        <div>
-            {data?.items.map((item) => <Main data={item}></Main>)}
-        </div>
+        <Container>
+            {dataAllFilms.items.map((item) => <Main data={item}></Main>)}
+            
+        </Container>
+        
     );
 };
 
