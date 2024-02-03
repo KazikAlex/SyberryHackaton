@@ -1,14 +1,17 @@
 import React from 'react'
+import styles from "./loginForm.module.scss";
 
 export const LoginForm = () => {
   return (
-    <div className='loginForm'>
+    <div className={styles.loginForm}>
       <form>
-        <label htmlFor="UserName">
-          <input type="login" />
+        <label className={styles.label} htmlFor="UserName" >
+          UserName
+          <input className={styles.input} type="login" />
         </label>
-        <label htmlFor="Password">
-          <input type="password" />
+        <label className={styles.label} htmlFor="Password">
+          Login
+          <input className={styles.input} type="password" />
         </label>
       </form>
     </div>

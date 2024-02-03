@@ -3,15 +3,15 @@ import styles from "./Header.module.scss";
 import Container from "../Container/Container";
 import Button from "../Button/Button";
 import { useState } from "react";
-// import LoginForm from "../LoginForm/LoginForm";
+import LoginForm from "../LoginForm/LoginForm";
 
 export default function Header() {
   const [isUserLog, setUserLog] = useState(true);
-  // const [activeForm, setActiveForm] = useState(false);
+  const [activeForm, setActiveForm] = useState(false);
 
-  // const activeFormHandler = (direction) => {
-  //   setActiveForm(direction)
-  // }
+  const activeFormHandler = () => {
+    setActiveForm(!activeForm);
+  }
 
   return (
     <Container className={styles.header}>
@@ -35,9 +35,10 @@ export default function Header() {
           <input className={styles.input} type="text" name="" id="" />
           <Button context={"Поиск"} className={styles.header_btn}></Button>
         </form>
-        <Button context={"Войти"} className={styles.header_btn}></Button>
-        {/* <Button context={"Войти"} className={styles.header_btn} onClick={() => activeFormHandler(true)}></Button> */}
-        {/* <LoginForm styles={{"display": activeForm ? "block" : "none"}} /> */}
+        <Button context={"Войти"} className={styles.header_btn}  click={activeFormHandler}></Button>
+        {
+          activeForm ? <LoginForm /> : null
+        }
       </header>
     </Container>
   );
