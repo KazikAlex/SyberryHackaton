@@ -8,6 +8,7 @@ import {
 // import {Home} from './pages/home/home'
 import {LoginPage} from './pages/loginPage/LoginPage'
 import UserPage from './pages/UserPage/UserPage';
+import Main from './pages/Main/main';
 
 
 const publicRoutes = [
