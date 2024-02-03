@@ -22,6 +22,7 @@ export default function Header() {
     setActiveForm(!activeForm);
   };
 
+  console.log(dataSearch);
   return (
     <Container className={styles.header}>
       <header className={styles.header__container}>
@@ -48,11 +49,15 @@ export default function Header() {
             value={search}
             onChange={onChangeHandler}
           />
+          {search && <ul className={styles.ul}>
+            {dataSearch?.films.map((item) => <li>
+              <p>{item.nameRu}</p>
+            </li> )}</ul>}
           {/* {JSON.stringify(dataSearch)}
           <div>
             <ul>
             {dataSearch?.items.map(item => (
-              <li>{item.keyword}</li>
+              // <li><p>{item.keyword}</p></li>
             ))}
             </ul>
             </div> */}
