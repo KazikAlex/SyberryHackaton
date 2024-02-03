@@ -1,9 +1,10 @@
 import "./App.css";
+import Header from "./components/Header/Header.jsx";
 
 function App() {
   return (
     <div className='App'>
-      <header className='App-header'>Hello Syberry</header>
+      <Header></Header>
     </div>
   );
 }
