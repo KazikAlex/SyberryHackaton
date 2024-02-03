@@ -1,19 +1,29 @@
 import React from 'react';
-import Main from '../Main/main'
 import {useGetCollectionsFilmsQuery, useGetFilmsQuery} from "../../services/base-api";
-import Container from '../../components/Container/Container';
-
+import Main from '../Main/main'
+import styles from './home.module.scss'
+import CardImage from '../Main/CardImage/cardImage';
+import CardContent from '../Main/CardContent/cardContent';
+import Slider from '../Main/Slider/slider';
 
 export const Home = () => {
-    const {data: filmData} = useGetFilmsQuery(Math.floor(Math.random() * 700))
+    const {data: randomFilm} = useGetFilmsQuery(122554)
+    console.log(randomFilm);
     const {data: dataAllFilms} = useGetCollectionsFilmsQuery()
-    console.log(dataAllFilms?.items);
+    console.log(dataAllFilms);
+    const elem = Math.floor(Math.random() * 700)
      return (
-        <Container>
-            {dataAllFilms.items.map((item) => <Main data={item}></Main>)}
-            
-        </Container>
-        
+        <div className={styles.homeContainer}>
+            <div className={styles.random}>
+                <CardImage data={randomFilm}></CardImage>
+                <CardContent data={randomFilm}></CardContent>
+            </div>
+            <p>Топ 10</p>
+            <Slider data={dataAllFilms?.items}>
+
+            </Slider>
+            {/* {data?.items.map((item) => <Main data={item}></Main>)} */}
+        </div>
     );
 };
 
