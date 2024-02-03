@@ -1,6 +1,7 @@
 import React from "react";
 import styles from  "./cardContent.scss";
 import Button from '../../../components/Button/Button'
+import { Link } from "react-router-dom";
 
 export default function CardContent({data}) {
  
@@ -23,7 +24,7 @@ export default function CardContent({data}) {
           <span>Слоган</span>
         </div>
         <div className="right">
-          <Button context={"Cмотреть онлайн"} className={styles.btn}></Button>
+          <Button context={"Cмотреть онлайн"} className={styles.btn}> <Link to = '/film'></Link></Button>
           <span>{data?.countries[0].country}</span>
           <span>{data?.genres[0].genre}</span>
           <span>{data?.filmLength} мин</span>

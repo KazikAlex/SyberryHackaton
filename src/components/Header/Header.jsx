@@ -16,19 +16,19 @@ export default function Header() {
   return (
     <Container className={styles.header}>
       <header className={styles.header__container}>
-        <div className={styles.logo} id="/">
-          <img src="icons/logo.svg" alt="logo"></img>
+      <a href="/" className={styles.logo} >
+        <img src="icons/logo.svg" alt="logo"></img>
           <p className={styles.logo_p}>HackaFilm</p>
-        </div>
-        {isUserLog && (
-          <div className={styles.favorite}>
+      </a>
+        {isUserLog && (            
+          <a href="/user-page" className={styles.favorite}>
             <img
-              className={styles.favorite_img}
-              src="icons/star-svgrepo-com.svg"
-              alt="star"
-            ></img>
-            <p className={styles.favorite_p}>Favorites film</p>
-          </div>
+                className={styles.favorite_img}
+                src="icons/star-svgrepo-com.svg"
+                alt="star"
+              ></img>
+              <p className={styles.favorite_p}>Favorites film</p>
+          </a>
         )}
 
         <form className={styles.form}>
