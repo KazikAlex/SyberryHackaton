@@ -1,7 +1,7 @@
 import React from "react";
 import "./cardContent.scss";
 
-export default function CardContent() {
+export default function CardContent(props) {
   return (
     <div className="aboutFilm">
       <div className="common">
