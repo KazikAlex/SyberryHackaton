@@ -10,7 +10,8 @@ export const Home = () => {
     console.log(dataAllFilms?.items);
      return (
         <Container>
-            {/* <Main data = {dataAllFilms.items[el]}></Main> */}
+            {dataAllFilms.items.map((item) => <Main data={item}></Main>)}
+            
         </Container>
         
     );
