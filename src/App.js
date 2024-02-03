@@ -1,12 +1,15 @@
-import "./App.css";
-import Main from "./pages/Main/main";
+import { Provider } from "react-redux";
 
-function App() {
+import { Layout } from "./components/layout/layout";
+import { Router } from "./router";
+import { store } from "./services/store";
+
+export const App = () => {
   return (
-    <div className="App">
-      <Main></Main>
-    </div>
+    <Provider store={store}>
+      <Layout>
+        <Router />
+      </Layout>
+    </Provider>
   );
-}
-
-export default App;
+};
