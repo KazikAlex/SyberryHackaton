@@ -1,8 +1,8 @@
 import React from "react";
 import "./cardContent.scss";
 
-export default function CardContent() {
-  //const {data} = use()
+
+export default function CardContent({data}) {
   return (
     <div className="aboutFilm">
       <div className="common">
