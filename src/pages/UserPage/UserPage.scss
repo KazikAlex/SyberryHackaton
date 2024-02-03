@@ -1,0 +1,34 @@
+.user-page-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .user-info {
+        justify-self: center;
+
+        .user-info__photo {
+            background-color: #5f575777;
+            width: 200px;
+            height: 200px;
+            border-radius: 16px;
+            display: grid;
+            place-content: center;
+            align-self: center;
+        }
+        
+        .user-icon {
+            scale: 4;
+        }
+
+    }
+
+    .user-favourites {
+        justify-self: center;
+    }
+    
+    .user-visited-movies {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        justify-self: center;
+    }
+}
+
