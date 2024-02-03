@@ -1,5 +1,6 @@
 import React from "react";
 import FilmCard from "./FilmCard/filmCard";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function Slider() {
   return (
@@ -9,7 +10,7 @@ export default function Slider() {
         <FilmCard />
       </div>
       <div>
-        <img />
+        <ArrowForwardIcon />
       </div>
     </>
   );
