@@ -1,7 +1,8 @@
 import React from "react";
 
-export default function CardImage() {
+export default function CardImage(data) {
   //const {data} = use()
   return null;
-  // return <img src={data.posterUrl} alt="Картинка" />;
+  // console.log(data) 
+  // return <img src={data.items.posterUrlPreview} alt="Картинка" />;
 }
