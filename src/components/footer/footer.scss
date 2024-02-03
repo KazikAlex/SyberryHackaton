@@ -19,6 +19,7 @@ a {
         flex-wrap: wrap;
         padding-bottom: 6px;
         letter-spacing: 2px;
+        height: 6vh;
 
         .footer-internal-links__link {
             padding: 4px 20px;
@@ -35,6 +36,8 @@ a {
         align-items: center;
         height: 12vh;
         padding: 5px;
+        flex-wrap: wrap;
+        gap: 10px;
         
         .footer-external-links__links {
             position: absolute;
@@ -43,13 +46,15 @@ a {
             flex-wrap: wrap;
             padding-left: 40px;
 
-            .footer-external-link {
-                padding: 10px;
+            .footer-external-links__icon {
+                padding: 0 14px;
+                scale: 1.5;
             }
         }
 
         .footer-external-links__links p {
             align-self: center;
+            padding-right: 16px;
         }
     }
 }
