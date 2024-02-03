@@ -6,8 +6,8 @@ export const Home = () => {
     console.log(data)
      return (
         <div>
-
-            {JSON.stringify(data)}
+            
+            {/* {JSON.stringify(data)} */}
         </div>
     );
 };
