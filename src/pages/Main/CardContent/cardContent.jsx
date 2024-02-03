@@ -1,12 +1,13 @@
 import React from "react";
 import "./cardContent.scss";
 
-export default function CardContent(props) {
+export default function CardContent() {
+  //const {data} = use()
   return (
     <div className="aboutFilm">
       <div className="common">
-        <span>FilmName</span>
-        <span>EngName</span>
+        {/* <span>{data.nameRu}</span>
+        <span>{data.nameEn}</span> */}
         <button>Смотреть</button>
       </div>
       <div className="filmDescription">
@@ -14,17 +15,19 @@ export default function CardContent(props) {
           <span>Страна</span>
           <span>Жанр</span>
           <span>Продолжительность</span>
-          <span>Премьера (Мир)</span>
-          <span>Качество</span>
-          <span>Режисер</span>
+          <span>Премьера</span>
+          <span>Возрастное ограничение</span>
+          <span>Рейтинг Кинопоиска</span>
+          <span>Слоган</span>
         </div>
         <div className="right">
-          <span>Франция</span>
-          <span>Боевик</span>
-          <span>113 мин</span>
-          <span>август</span>
-          <span>тс</span>
-          <span>Люк</span>
+          {/* <span>{data.countries[0].country}</span>
+          <span>{data.genres[0].genre}</span>
+          <span>{data.filmLength} мин</span>
+          <span>{data.startYear}</span>
+          <span>{data.ratingAgeLimits}</span>
+          <span>{data.ratingKinopoisk}</span>
+          <span>{data.slogan}</span> */}
         </div>
       </div>
       <div>
