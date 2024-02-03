@@ -1,6 +1,8 @@
 import React from "react";
-import Img from "./img/about-pets-320.png";
 
-export default function CardImage() {
-  return <img src={Img} alt="Картинка" />;
+export default function CardImage(data) {
+  //const {data} = use()
+  return null;
+  // console.log(data) 
+  // return <img src={data.items.posterUrlPreview} alt="Картинка" />;
 }
