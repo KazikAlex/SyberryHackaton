@@ -4,7 +4,7 @@ import Container from "../Container/Container";
 import Button from "../Button/Button";
 import { useState } from "react";
 import LoginForm from "../LoginForm/LoginForm";
-import { useGetSearchByKeywordFilmsQuery } from '../../services/base-api';
+import { useGetSearchByKeywordFilmsQuery } from "../../services/base-api";
 
 export default function Header() {
   const [isUserLog, setUserLog] = useState(true);
@@ -26,10 +26,14 @@ export default function Header() {
   return (
     <Container className={styles.header}>
       <header className={styles.header__container}>
-        <a href="/" className={styles.logo} id="/">
+        {/* <a href="/" className={styles.logo} id="/">
+          </a>
+          <img src="icons/logo.svg" alt="logo"></img> */}
+        <a href="/" className={styles.logo}>
           <img src="icons/logo.svg" alt="logo"></img>
           <p className={styles.logo_p}>HackaFilm</p>
         </a>
+        {/* {isUserLog && <a href="/user-page" className={styles.favorite}></a>} */}
         {isUserLog && (
           <a href="/user-page" className={styles.favorite}>
             <img
@@ -49,10 +53,15 @@ export default function Header() {
             value={search}
             onChange={onChangeHandler}
           />
-          {search && <ul className={styles.ul}>
-            {dataSearch?.films.map((item) => <li>
-              <p>{item.nameRu}</p>
-            </li> )}</ul>}
+          {search && (
+            <ul className={styles.ul}>
+              {dataSearch?.films.map((item) => (
+                <li>
+                  <p>{item.nameRu}</p>
+                </li>
+              ))}
+            </ul>
+          )}
           {/* {JSON.stringify(dataSearch)}
           <div>
             <ul>

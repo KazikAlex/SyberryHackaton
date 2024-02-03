@@ -1,0 +1,16 @@
+.homeContaine{
+    display: flex;
+    flex-direction: row;
+    max-width: 85vw;
+    margin: 0 5rem;
+}
+
+.random{
+    display: flex;
+    flex-direction: row;
+}
+
+.cardImgHome{
+    width: 500px;
+    height: auto;
+}

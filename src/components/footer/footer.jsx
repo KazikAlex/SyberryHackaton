@@ -4,10 +4,12 @@ import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import Container from '../Container/Container';
 
 export default function Footer() {
     return (
-        <div className="footer">
+        <Container>
+             <div className="footer">
             <nav>
                 <ul className="footer-internal-links">
                     <li><a href="#" className="footer-internal-links__link">Features</a></li>
@@ -31,5 +33,7 @@ export default function Footer() {
                 </div>
             </div>
         </div>
+        </Container>
+       
     )
 }

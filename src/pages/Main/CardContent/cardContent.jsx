@@ -1,17 +1,20 @@
 import React from "react";
-import "./cardContent.scss";
+import styles from  "./cardContent.scss";
+import Button from '../../../components/Button/Button'
+import { Link } from "react-router-dom";
 
-export default function CardContent() {
-  //const {data} = use()
+export default function CardContent({data}) {
+ 
   return (
     <div className="aboutFilm">
       <div className="common">
-        {/* <span>{data.nameRu}</span>
-        <span>{data.nameEn}</span> */}
-        <button>Смотреть</button>
+        
+        <span>{data?.nameEn}</span>
+        
       </div>
       <div className="filmDescription">
         <div className="left">
+        <span>{data?.nameRu}</span>
           <span>Страна</span>
           <span>Жанр</span>
           <span>Продолжительность</span>
@@ -21,13 +24,14 @@ export default function CardContent() {
           <span>Слоган</span>
         </div>
         <div className="right">
-          {/* <span>{data.countries[0].country}</span>
-          <span>{data.genres[0].genre}</span>
-          <span>{data.filmLength} мин</span>
-          <span>{data.startYear}</span>
-          <span>{data.ratingAgeLimits}</span>
-          <span>{data.ratingKinopoisk}</span>
-          <span>{data.slogan}</span> */}
+          <Button context={"Cмотреть онлайн"} className={styles.btn}> <Link to = '/film'></Link></Button>
+          <span>{data?.countries[0].country}</span>
+          <span>{data?.genres[0].genre}</span>
+          <span>{data?.filmLength} мин</span>
+          <span>{data?.startYear}</span>
+          <span>{data?.ratingAgeLimits}</span>
+          <span>{data?.ratingKinopoisk}</span>
+          <span>{data?.slogan}</span>
         </div>
       </div>
       <div>

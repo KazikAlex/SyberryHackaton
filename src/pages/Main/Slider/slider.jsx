@@ -1,18 +1,28 @@
 import React from "react";
 import FilmCard from "./FilmCard/filmCard";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import "./slider.scss";
+import styles from "./slider.scss";
+import {Swiper,SwiperSlide} from "swiper/react";
+import { Navigation, Pagination} from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-export default function Slider() {
+export default function Slider({data}) {
   return (
-    <div className="slider">
-      <div>
-        <h3>ТОП-10 Фильмов</h3>
-        <FilmCard />
-      </div>
-      <div>
-        <ArrowForwardIcon />
-      </div>
-    </div>
+    <Swiper
+    // install Swiper modules
+    modules={[Navigation, Pagination]}
+    spaceBetween={10}
+    slidesPerView={4}
+    navigation
+    pagination={{ clickable: true }}
+    loop={{loop:true}}
+  >
+  {data?.map((item) => <SwiperSlide>
+      <FilmCard data={item}></FilmCard>
+    </SwiperSlide>)}
+
+  </Swiper>
   );
 }

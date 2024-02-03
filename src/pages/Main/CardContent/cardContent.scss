@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import "../../../styles/variables.scss";
+@import "../../../styles//mixins.scss";
+
+
 .filmDescription {
   display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
 }
 
 .left {
@@ -14,8 +21,22 @@
 
 .common {
   display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .aboutFilm {
-  padding-left: 50px;
+  padding-left: 5rem;
+  font-size: 1.5rem;
+}
+
+.btn {
+  @include flex($content: center, $gap: 0.5rem);
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in;
+  width: 8rem;
+  height: 2.75rem;
+  background-color: $color-lGrey;
+  color: rgb(14, 56, 42);
+  cursor: pointer;
 }
