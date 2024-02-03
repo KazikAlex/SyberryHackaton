@@ -4,7 +4,8 @@ import Main from '../Main/main'
 
 export const Home = () => {
     const {data} = useGetCollectionsFilmsQuery()
-    console.log(data?.items)
+    const elem = Math.floor(Math.random() * 700)
+    console.log(data?.items[elem])
      return (
         <div>
             {data?.items.map((item) => <Main data={item}></Main>)}
