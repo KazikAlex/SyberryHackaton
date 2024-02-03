@@ -6,8 +6,8 @@ export default function CardContent() {
   return (
     <div className="aboutFilm">
       <div className="common">
-        <span>{data.nameRu}</span>
-        <span>{data.nameEn}</span>
+        {/* <span>{data.nameRu}</span>
+        <span>{data.nameEn}</span> */}
         <button>Смотреть</button>
       </div>
       <div className="filmDescription">
@@ -21,13 +21,13 @@ export default function CardContent() {
           <span>Слоган</span>
         </div>
         <div className="right">
-          <span>{data.countries[0].country}</span>
+          {/* <span>{data.countries[0].country}</span>
           <span>{data.genres[0].genre}</span>
           <span>{data.filmLength} мин</span>
           <span>{data.startYear}</span>
           <span>{data.ratingAgeLimits}</span>
           <span>{data.ratingKinopoisk}</span>
-          <span>{data.slogan}</span>
+          <span>{data.slogan}</span> */}
         </div>
       </div>
       <div>
